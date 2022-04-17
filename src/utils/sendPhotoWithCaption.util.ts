@@ -1,6 +1,6 @@
 import { FeedItem } from "../@types/data.type"
 import { bot } from "../bot/index"
-import { channelId, devChannelId } from "../config"
+import { channelId } from "../config"
 import { createCaption } from "./createCaption.util"
 
 export const sendPhotoWithCaption = async (feedItem: FeedItem) => {
