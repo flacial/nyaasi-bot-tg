@@ -14,4 +14,4 @@ Telegram bot that fetches nyaa.si RSS feed and format it into channel posts
 
 ---
 
-Code style and folders structure is inspired from [c0d3-cli repo](https://github.com/garageScript/c0d3-cli)
+Code style and folders structure are inspired from [c0d3-cli repo](https://github.com/garageScript/c0d3-cli)
