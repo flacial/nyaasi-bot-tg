@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "lib": ["es2021", "DOM", "DOM.Iterable", "ES2015.Collection", "ES2015"],
+        "esModuleInterop": true,
+        "target": "ES2022",
+        "moduleResolution": "node"
+    },
+  }
