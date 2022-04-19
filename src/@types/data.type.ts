@@ -27,4 +27,4 @@ export enum ALLOWED_CATEGORIES {
     translatedAnime = '1_2'
 }
 
-export type State = Promise<{ x: FeedItem[] | FeedItem; lastStoredFeedItemIndex: number } | null>
+export type State = Promise<{ x: FeedItem[] | FeedItem; storedFeedItemIndex: number } | null>
