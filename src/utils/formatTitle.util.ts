@@ -7,7 +7,7 @@ export const formatTitle = (title: string) => {
         // Remove extension
         .replaceAll(/\.[0-9a-z]+$/g, '')
         // Remove extra info after a minus symbol (-)
-        .split('-')?.[0]
+        // .split('-')?.[0]
         // Remove extra spaces from both sides
         .trim()
 }
