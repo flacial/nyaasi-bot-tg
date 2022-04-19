@@ -16,11 +16,11 @@ export const sendReleases = async (feedItems: FeedItem[], i = feedItems.length -
 export const sendRelease = async (state: State) => {
     if (!(await state)) return 'No new release'
 
-    const { x, lastStoredFeedItemIndex } = await state
+    const { x, storedFeedItemIndex } = await state
     const lateRelease = Array.isArray(x)
-    const startingIndex = lastStoredFeedItemIndex < 0
-        ? lateRelease && x.length
-        : lastStoredFeedItemIndex - 1
+    const startingIndex = storedFeedItemIndex < 0
+        ? lateRelease && x.length - 1
+        : storedFeedItemIndex - 1
 
     lateRelease ? await sendReleases(x, startingIndex) : await sendPhotoWithCaption(x)
 
