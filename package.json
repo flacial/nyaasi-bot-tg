@@ -14,6 +14,7 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "fp-ts": "^2.11.9",
+    "jsdom": "^19.0.0",
     "kitsu": "^10.0.0-alpha.22",
     "lodash": "^4.17.21",
     "node-telegram-bot-api": "^0.56.0",
