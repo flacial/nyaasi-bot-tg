@@ -1,6 +1,6 @@
 import { pipe } from "fp-ts/lib/function"
 import { FeedItem } from "../@types/data.type"
-import { MAGNET_REDIRECT } from "../constants"
+import { MAGNET_ERROR, MAGNET_REDIRECT } from "../constants"
 import { formatTitle } from "./formatTitle.util"
 import { getItemHTML, getMagnet } from "./getData.util"
 import { getPoster } from "./poster.util"
@@ -24,10 +24,8 @@ export const createCaption = async (item: FeedItem) => {
         getItemHTML,
         getMagnet
     )
-    const magnetBase64 = Buffer.from(magnet).toString('base64')
-    const magnetCaption = magnet ?
-        `${strongHTML('Magnet:')} ${linkHTML(`${MAGNET_REDIRECT}${magnetBase64}`)}`
-        : ''
+    const magnetBase64 = magnet && Buffer.from(magnet).toString('base64')
+    const magnetCaption = `${strongHTML('Magnet:')} ${magnet ? linkHTML(`${MAGNET_REDIRECT}${magnetBase64}`) : MAGNET_ERROR}`
     
     const size = item?.size
     const sizeCaption = size ? `${strongHTML('Size:')} ${codeHTML(size)}` : ''
