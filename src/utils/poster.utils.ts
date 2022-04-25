@@ -7,7 +7,7 @@ type AnimeOrError = Promise<{ data: Anime[] }> | null
 
 const api = new Kitsu()
 
-const animePoster = async (anime: AnimeOrError) => {
+const getAnimePoster = async (anime: AnimeOrError) => {
     const animeData = await anime
     const animePoster = animeData?.data[0]?.posterImage?.original
 
@@ -24,6 +24,6 @@ const getAnime = (text: string): AnimeOrError => {
 
 export const getPoster = flow(
     getAnime,
-    animePoster,
+    getAnimePoster,
 )
 

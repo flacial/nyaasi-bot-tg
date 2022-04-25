@@ -1,5 +1,5 @@
 import { State } from "../@types/data.type"
-import { storage } from './storageInstance.util'
+import { storage } from './storageInstance.utils'
 
 export const storeNewFeedItem = async (state: State) => {
     if ((await state)) {

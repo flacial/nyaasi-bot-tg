@@ -1,3 +1,3 @@
-import Storage from "./storage.util"
+import Storage from "./storage.utils"
 
 export const storage = new Storage('./src/hashes', 'hashes', 'json')
