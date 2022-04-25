@@ -1,5 +1,5 @@
 import { FeedItem, ALLOWED_CATEGORIES, State } from "../@types/data.type"
-import { sendPhotoWithCaption } from "./sendPhotoWithCaption.util"
+import { sendPhotoWithCaption } from "./sendPhoto.util"
 
 export const sendReleases = async (feedItems: FeedItem[], i = feedItems.length - 1) => {
     if (i < 0) return

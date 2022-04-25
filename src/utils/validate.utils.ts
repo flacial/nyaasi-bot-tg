@@ -1,6 +1,6 @@
 import { FeedItem, ALLOWED_CATEGORIES } from "../@types/data.type"
-import { getItem } from "./feed.util"
-import { storage } from "./storageInstance.util"
+import { getItem } from "./feed.utils"
+import { storage } from "./storageInstance.utils"
 
 export const validateFeed = async (getItems: Promise<FeedItem[]>) => {
     const feedItems = await getItems

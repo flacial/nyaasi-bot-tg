@@ -1,11 +1,11 @@
 import { pipe } from "fp-ts/lib/function"
 import { FeedItem } from "../@types/data.type"
 import { MAGNET_ERROR, MAGNET_REDIRECT } from "../constants"
-import { formatTitle } from "./formatTitle.util"
-import { getItemHTML, getMagnet } from "./getData.util"
-import { getPoster } from "./poster.util"
-import { extractResolution } from "./resolution.util"
-import { strongHTML, codeHTML, linkHTML } from "./telegramHTML.util"
+import { formatTitle } from "./title.utils"
+import { getItemHTML, getMagnet } from "./data.utils"
+import { getPoster } from "./poster.utils"
+import { extractResolution } from "./resolution.utils"
+import { strongHTML, codeHTML, linkHTML } from "./html.utils"
 
 export const createCaption = async (item: FeedItem) => {
     const title = item?.title
