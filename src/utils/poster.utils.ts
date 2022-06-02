@@ -7,16 +7,18 @@ type AnimeOrError = Promise<{ data: Anime[] }> | null
 
 const api = new Kitsu()
 
-const getAnimePoster = async (anime: AnimeOrError) => {
+const getAnimePoster = async (anime: Promise<AnimeOrError>) => {
     const animeData = await anime
     const animePoster = animeData?.data[0]?.posterImage?.original
 
     return animePoster ? animePoster : ERROR_PHOTO
 }
 
-const getAnime = (text: string): AnimeOrError => {
+const getAnime = async (text: string): Promise<AnimeOrError> => {
     try {
-        return api.fetch('anime', { params: { filter: { text } } })
+        const poster = await api.fetch('anime', { params: { filter: { text } } })
+
+        return poster
     } catch (err) {
         return null
     }
