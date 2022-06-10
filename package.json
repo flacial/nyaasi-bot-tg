@@ -12,6 +12,7 @@
     "test": "jest --coverage --silent"
   },
   "dependencies": {
+    "@prisma/client": "3.14.0",
     "dotenv": "^16.0.0",
     "fp-ts": "^2.11.9",
     "jsdom": "^19.0.0",
@@ -36,6 +37,7 @@
     "eslint": "^8.12.0",
     "jest": "^28.0.0",
     "node-fetch": "^2.6.6",
+    "prisma": "^3.14.0",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
     "tsc": "^2.0.4",
