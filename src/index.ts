@@ -1,3 +1,3 @@
 import { startBot } from "./bot/bot";
 
-startBot()
+export default startBot
