@@ -11,14 +11,16 @@ app.use(helmet())
 
 app.get('/send', async (req, res) => {
     try {
-        const auth = req.headers.authorization.split(' ')?.[1]
-        if (auth !== process.env.ACCESS_SECRET) return res.sendStatus(403)
+        const auth = req.headers.authorization.split(' ')
+        const secret = auth[auth.length - 1]
+
+        if (secret !== process.env.ACCESS_SECRET) return res.sendStatus(403)
     
         console.log('Sending releases...')
         await startBot()
         console.log('Sent the releases ✅')
 
-        res.sendStatus(200)
+        return res.sendStatus(200)
     } catch (e) {
         res.send({ error: { message: e } })
     }
