@@ -1,7 +1,7 @@
 {
   "name": "nyaasi-bot",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "src/server/server.ts",
   "author": "Flacial <ruthemiumwithdiamond@protonmail.com>",
   "license": "MIT",
   "scripts": {
