@@ -5,11 +5,10 @@
   "author": "Flacial <ruthemiumwithdiamond@protonmail.com>",
   "license": "MIT",
   "scripts": {
-    "start:bot": "ts-node src/index.ts",
-    "start:server": "ts-node src/server/server.ts",
+    "start:bot": "npx ts-node src/index.ts",
+    "start:server": "npx ts-node src/server/server.ts",
     "autofix": "eslint . --ext .ts --fix",
     "type-check": "tsc",
-    "build": "tsc -p . && chmod +x ./dist/src/index.js",
     "test": "jest --coverage --silent"
   },
   "dependencies": {
@@ -23,7 +22,13 @@
     "kitsu": "^10.0.0-alpha.22",
     "lodash": "^4.17.21",
     "node-telegram-bot-api": "^0.56.0",
-    "rss-parser": "^3.12.0"
+    "rss-parser": "^3.12.0",
+    "node-fetch": "^2.6.6",
+    "prisma": "^3.14.0",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "tsc": "^2.0.4",
+    "typescript": "^4.6.3"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -40,12 +45,6 @@
     "@typescript-eslint/parser": "^5.18.0",
     "babel-jest": "^28.0.0",
     "eslint": "^8.12.0",
-    "jest": "^28.0.0",
-    "node-fetch": "^2.6.6",
-    "prisma": "^3.14.0",
-    "ts-jest": "^27.1.4",
-    "ts-node": "^10.7.0",
-    "tsc": "^2.0.4",
-    "typescript": "^4.6.3"
+    "jest": "^28.0.0"
   }
 }
