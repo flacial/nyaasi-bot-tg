@@ -1,5 +1,8 @@
 version: 2.1
 
+orbs: 
+  node: circleci/node@5.0.2
+
 jobs:
   type-checking:
     docker:
@@ -17,14 +20,16 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "Install the packages"
-          command: "npm install"
-      - run:
-          name: "Run the tests"
-          command: "npm run test"
+      - node/install:
+          install-yarn: true
+          node-version: '16.13'
+      - run: yarn
+      - run: yarn test
+
 workflows:
   main-workflow:
     jobs:
       - type-checking
       - test
+      - node/test:
+          test-results-for: jest
