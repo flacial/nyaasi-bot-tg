@@ -9,12 +9,11 @@ jobs:
       - image: cimg/base:stable
     steps:
       - checkout
-      - run:
-          name: "Install the packages"
-          command: "npm install"
-      - run:
-          name: "Validate the types"
-          command: "npm run tsc"
+      - node/install:
+          install-yarn: true
+          node-version: '16.13'
+      - run: yarn
+      - run: yarn tsc
   test:
     docker:
       - image: cimg/base:stable
@@ -31,5 +30,3 @@ workflows:
     jobs:
       - type-checking
       - test
-      - node/test:
-          test-results-for: jest
