@@ -12,7 +12,3 @@ Telegram bot that fetches nyaa.si RSS feed and format it into channel posts
 - Run `yarn` to install the packages
 - Run `yarn start:bot` to start the bot
 - Run `yarn start:server` to start the server
-
----
-
-Code style and folders structure are inspired from [c0d3-cli repo](https://github.com/garageScript/c0d3-cli)
