@@ -12,3 +12,7 @@ Telegram bot that fetches nyaa.si RSS feed and format it into channel posts
 - Run `yarn` to install the packages
 - Run `yarn start:bot` to start the bot
 - Run `yarn start:server` to start the server
+
+### Deploy
+
+It's possible to deploy it to Heroku if they kept the free-tier available.
